@@ -8,5 +8,11 @@ pipeline {
       }
     }
 
+    stage('fail') {
+      steps {
+        catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS', catchInterruptions: true)
+      }
+    }
+
   }
 }
