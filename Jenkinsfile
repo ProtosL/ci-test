@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('test') {
       steps {
-        echo 'tests'
+        warnError(message: '123')
       }
     }
 
